@@ -1,16 +1,6 @@
-# Eliza - Multi-agent simulation framework
-
-# https://github.com/elizaOS/eliza
-
-# Visit https://eliza.builders for support
-
-## 🌍 README Translations
-
-[中文说明](./README_CN.md) | [Deutsch](./README_DE.md) | [Français](./README_FR.md) | [ไทย](./README_TH.md) | [Español](README_ES.md)
+# Nova; built on Eliza - ai16z's Multi-agent Simulation Framework
 
 # dev branch
-
-<img src="static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
 
 _As seen powering [@DegenSpartanAI](https://x.com/degenspartanai) and [@MarcAIndreessen](https://x.com/pmairca)_
 
@@ -19,7 +9,7 @@ _As seen powering [@DegenSpartanAI](https://x.com/degenspartanai) and [@MarcAInd
 - Full-featured Discord and Twitter connectors, with Discord voice channel support
 - Full conversational and document RAG memory
 - Can read links and PDFs, transcribe audio and videos, summarize conversations, and more
-- Highly extensible - create your own actions and clients to extend Eliza's capabilities
+- Highly extensible - create your own actions and clients to extend Nova's capabilities
 - Supports open source and local models (default configured with Nous Hermes Llama 3.1B)
 - Supports OpenAI for cloud inference on a light-weight device
 - "Ask Claude" mode for calling Claude on more complex queries
@@ -37,23 +27,7 @@ _As seen powering [@DegenSpartanAI](https://x.com/degenspartanai) and [@MarcAInd
 - Copy .env.example to .env and fill in the appropriate values
 - Edit the TWITTER environment variables to add your bot's username and password
 
-### Edit the character file
-
-- Check out the file `src/core/defaultCharacter.ts` - you can modify this
-- You can also load characters with the `pnpm start --characters="path/to/your/character.json"` and run multiple bots at the same time.
-
-After setting up the .env file and character file, you can start the bot with the following command:
-
-```
-pnpm i
-pnpm start
-```
-
-# Customising Eliza
-
-### Adding custom actions
-
-To avoid git clashes in the core directory, we recommend adding custom actions to a `custom_actions` directory and then adding them to the `elizaConfig.yaml` file. See the `elizaConfig.example.yaml` file for an example.
+# Customising Nova
 
 ## Running with different models
 
@@ -174,12 +148,6 @@ Tests are written using Jest and can be found in `src/**/*.test.ts` files. The t
 
 To create new tests, add a `.test.ts` file adjacent to the code you're testing.
 
-## Docs Updates
-
-Please make sure to verify if the documentation provided is correct. In order to do so, please run the docs service.
-
 ```console
 docker compose -f docker-compose-docs.yaml up --build
 ```
-
-The docusaurus server will get started and you can verify it locally at https://localhost:3000/eliza.
